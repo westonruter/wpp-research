@@ -229,9 +229,9 @@ function getParamsFromOptions( opt ) {
 		);
 	}
 
-	if ( params.diff && ! params.file ) {
+	if ( params.diff && ! ( params.file || params.url.length === 2 ) ) {
 		throw new Error(
-			'The --diff argument is only relevant when you supply a --file argument which references a file with two URLs.'
+			'The --diff argument is only relevant when you supply a --file argument which references a file with two URLs, or you supply two URLs via multiple --url (-u) arguments.'
 		);
 	}
 
