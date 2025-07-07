@@ -17,7 +17,7 @@
 # See query results here: https://github.com/GoogleChromeLabs/wpp-research/pull/194
 
 DECLARE
-  DATE_TO_QUERY DATE DEFAULT '2025-07-01';
+  DATE_TO_QUERY DATE DEFAULT '2025-06-01';
 
 CREATE TEMPORARY FUNCTION IS_CMS(technologies ARRAY<STRUCT<technology STRING, categories ARRAY<STRING>, info ARRAY<STRING>>>, cms STRING, version STRING) RETURNS BOOL AS (
   EXISTS(
