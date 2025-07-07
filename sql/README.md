@@ -20,6 +20,10 @@ For additional considerations for writing BigQuery queries against HTTP Archive,
 
 ## Query index
 
+### 2025/07
+
+* [% of WordPress sites using Allow to wrap to multiple lines option in Row block](./2025/07/row-block-allow-to-wrap-to-multiple-lines-usage.sql)
+
 ### 2025/05
 
 * [% of WordPress sites using featured image block](./2025/05/featured-image-block-usage.sql)
