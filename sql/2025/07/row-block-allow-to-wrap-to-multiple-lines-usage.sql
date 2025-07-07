@@ -55,7 +55,10 @@ rowBlockDetection AS (
     date = DATE_TO_QUERY
     AND is_root_page = TRUE
     AND is_main_document
-    AND REGEXP_CONTAINS(response_body, r'<div class="wp-block-group is-horizontal is-nowrap')
+    AND REGEXP_CONTAINS(
+      response_body,
+      r'<\w+[^>]+class="[^"]*\bwp-block-group\b[^"]*\bis-horizontal\b[^"]*\bis-nowrap\b[^"]*"'
+    )
 )
 
 SELECT
