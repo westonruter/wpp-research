@@ -91,7 +91,7 @@ export const options = [
 	{
 		argname: '-m, --metrics <metrics...>',
 		description:
-			'Which metrics to include; by default these are "FCP", "LCP", "TTFB", "TTLB", "LCP-TTFB", and "TTLB-TTFB".',
+			'Which metrics to include; by default these are "FCP", "LCP", "TTFB", "TTLB", and "LCP-TTFB".',
 	},
 	{
 		argname: '-o, --output <output>',
@@ -197,7 +197,7 @@ function getParamsFromOptions( opt ) {
 		metrics:
 			opt.metrics && opt.metrics.length
 				? opt.metrics
-				: [ 'FCP', 'LCP', 'TTFB', 'TTLB', 'LCP-TTFB', 'TTLB-TTFB' ],
+				: [ 'FCP', 'LCP', 'TTFB', 'TTLB', 'LCP-TTFB' ],
 		output: opt.output,
 		showPercentiles: Boolean( opt.showPercentiles ),
 		showVariance: Boolean( opt.showVariance ),
@@ -354,11 +354,6 @@ function getMetricsDefinition( metrics ) {
 		'LCP-TTFB': {
 			type: 'aggregate',
 			add: [ 'LCP' ],
-			subtract: [ 'TTFB' ],
-		},
-		'TTLB-TTFB': {
-			type: 'aggregate',
-			add: [ 'TTLB' ],
 			subtract: [ 'TTFB' ],
 		},
 	};
