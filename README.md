@@ -10,3 +10,4 @@ A collection of CLI scripts and SQL queries to research various WordPress perfor
 Additional features merged into this fork of [GoogleChromeLabs/wpp-research](https://github.com/GoogleChromeLabs/wpp-research):
 
 * [Add TTLB (Time To Last Byte) metric](https://github.com/GoogleChromeLabs/wpp-research/pull/199)
+* [Add --wait-until arg to benchmark-web-vitals](https://github.com/GoogleChromeLabs/wpp-research/pull/203)
