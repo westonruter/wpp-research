@@ -5,6 +5,8 @@ A collection of CLI scripts and SQL queries to research various WordPress perfor
 * The `cli` directory contains the source code for the various CLI scripts (which can be invoked by `npm run research`).
 * The `sql` directory contains BigQuery SQL queries to gather field data from e.g. HTTP Archive.
 
-## Disclaimer
+## Fork
 
-This is not an officially supported Google product
+Additional features merged into this fork of [GoogleChromeLabs/wpp-research](https://github.com/GoogleChromeLabs/wpp-research):
+
+* [Add TTLB (Time To Last Byte) metric](https://github.com/GoogleChromeLabs/wpp-research/pull/199)
