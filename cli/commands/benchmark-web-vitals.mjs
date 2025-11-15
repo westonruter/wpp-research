@@ -327,10 +327,19 @@ function getParamsFromOptions( opt ) {
 		params.pauseDuration = pauseDuration;
 	}
 
-	const validLifecycleEvents = [ 'load', 'domcontentloaded', 'networkidle0', 'networkidle2' ];
+	const validLifecycleEvents = [
+		'load',
+		'domcontentloaded',
+		'networkidle0',
+		'networkidle2',
+	];
 	for ( const waitUntil of opt.waitUntil ) {
 		if ( ! validLifecycleEvents.includes( waitUntil ) ) {
-			throw new Error( `Unexpected value '${ waitUntil }' for --wait-until. Expected one or more of: ${ validLifecycleEvents.join( ', ' ) }` );
+			throw new Error(
+				`Unexpected value '${ waitUntil }' for --wait-until. Expected one or more of: ${ validLifecycleEvents.join(
+					', '
+				) }`
+			);
 		}
 	}
 

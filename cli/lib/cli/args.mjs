@@ -49,7 +49,7 @@ export function parseWptTestId( testIdOrUrl ) {
  * @param {string[]} args
  * @return {string[]} Args.
  */
-export function collectArgs(arg, args ) {
+export function collectArgs( arg, args ) {
 	return args.concat( [ arg ] );
 }
 
